@@ -8,17 +8,32 @@ TODO: Write short description here and build.gradle file.
 
 ## Configuration
 
-- **option1**: description (integer, required)
-- **option2**: description (string, default: `"myvalue"`)
-- **option3**: description (string, default: `null`)
+- **target_columns**: columns to convert (array of string)
 
 ## Example
+
+Say input.csv is as follows:
+```csv
+id,name
+0,hoge\u0000
+1,fuga\u0041
+2,normal_string
+```
 
 ```yaml
 filters:
   - type: convert_unicode_sequence_to_string
-    option1: example1
-    option2: example2
+    target_columns:
+      - name
+```
+
+converts unicode escape sequence like below:
+
+```csv
+id,name
+0,hoge
+1,fugaA
+2,normal_string
 ```
 
 
