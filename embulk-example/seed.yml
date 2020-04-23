@@ -1,0 +1,18 @@
+in:
+  type: file
+  path_prefix: '/Users/reizist/go/src/github.com/reizist/embulk-filter-convert_unicode_sequence_to_string/embulk-example/csv/sample.csv'
+  parser:
+    charset: UTF-8
+    newline: CRLF
+    type: csv
+    delimiter: ','
+    skip_header_lines: 0
+    columns:
+    - {name: id, type: string}
+    - {name: name, type: string}
+filters:
+  - type: convert_unicode_sequence_to_string
+    target_columns:
+      - name
+out:
+  type: stdout

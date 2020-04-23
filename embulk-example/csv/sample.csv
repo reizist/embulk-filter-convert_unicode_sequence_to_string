@@ -1,0 +1,4 @@
+id,name
+0,hoge\u0000
+1,fuga\u0041
+2,normal_string
