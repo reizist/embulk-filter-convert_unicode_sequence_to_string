@@ -1,4 +1,4 @@
-![(Unnamed workflow)](https://github.com/reizist/embulk-filter-convert_unicode_sequence_to_string/workflows/(Unnamed%20workflow)/badge.svg)
+![Test CI](https://github.com/reizist/embulk-filter-convert_unicode_sequence_to_string/workflows/Test%20CI/badge.svg)
 
 [![Coverage Status](https://coveralls.io/repos/github/reizist/embulk-filter-convert_unicode_sequence_to_string/badge.svg)](https://coveralls.io/github/reizist/embulk-filter-convert_unicode_sequence_to_string)
 
