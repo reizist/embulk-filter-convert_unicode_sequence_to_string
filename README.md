@@ -1,6 +1,6 @@
 # Convert Unicode Sequence To String filter plugin for Embulk
 
-TODO: Write short description here and build.gradle file.
+Convert unicode sequence to string filter plugin.
 
 ## Overview
 
@@ -36,9 +36,30 @@ id,name
 2,normal_string
 ```
 
+### Run Example
+
+```
+$ ./gradlew gem
+$ embulk run ./embulk-example/seed.yml -I lib
+```
+
+docker environment:
+
+```
+docker-compose run embulk bash
+embulk run ./embulk-example/seed.yml -I lib
+```
 
 ## Build
 
 ```
 $ ./gradlew gem  # -t to watch change of files and rebuild continuously
 ```
+
+## Development
+
+```
+./gradlew classpath # build
+./gradlew checkstyle # check style
+```
+
