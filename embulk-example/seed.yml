@@ -1,6 +1,6 @@
 in:
   type: file
-  path_prefix: '/Users/reizist/go/src/github.com/reizist/embulk-filter-convert_unicode_sequence_to_string/embulk-example/csv/sample.csv'
+  path_prefix: 'embulk-example/csv/sample.csv'
   parser:
     charset: UTF-8
     newline: CRLF
