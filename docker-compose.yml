@@ -1,0 +1,7 @@
+version: '3'
+services:
+  embulk:
+    container_name: embulk
+    build: ./
+    volumes:
+      - .:/root/embulk
