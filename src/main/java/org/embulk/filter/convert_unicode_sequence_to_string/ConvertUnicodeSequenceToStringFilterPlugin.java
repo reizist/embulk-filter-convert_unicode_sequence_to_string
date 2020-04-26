@@ -1,8 +1,6 @@
 package org.embulk.filter.convert_unicode_sequence_to_string;
 
 import org.embulk.config.Config;
-import org.embulk.config.ConfigDefault;
-import org.embulk.config.ConfigException;
 import org.embulk.config.ConfigSource;
 import org.embulk.config.Task;
 import org.embulk.config.TaskSource;
@@ -22,10 +20,8 @@ public class ConvertUnicodeSequenceToStringFilterPlugin
     public interface PluginTask
             extends Task
     {
-        // configuration option 1 (required integer)
         @Config("target_columns")
-        @ConfigDefault("[]")
-        public List<String> getTargetColumns();
+        List<String> getTargetColumns();
     }
 
     @Override
@@ -34,18 +30,9 @@ public class ConvertUnicodeSequenceToStringFilterPlugin
     {
         PluginTask task = config.loadConfig(PluginTask.class);
 
-        configure(task);
-
         Schema outputSchema = inputSchema;
 
         control.run(task.dump(), outputSchema);
-    }
-
-    private void configure(PluginTask task)
-    {
-        if (task.getTargetColumns().size() < 1) {
-            throw new ConfigException("\"target_columns\" can be specified.");
-        }
     }
 
     @Override

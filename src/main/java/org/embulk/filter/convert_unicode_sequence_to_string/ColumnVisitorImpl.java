@@ -68,6 +68,7 @@ public class ColumnVisitorImpl implements ColumnVisitor
         else {
             for (String targetColumnName : task.getTargetColumns()) {
                 if (column.getName().equals(targetColumnName)) {
+                    System.out.println("pageReader.getString: " + column + ": " + pageReader.getString(column));
                     pageBuilder.setString(column, convert(pageReader.getString(column)));
                 }
                 else {
