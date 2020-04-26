@@ -1,3 +1,5 @@
+![(Unnamed workflow)](https://github.com/reizist/embulk-filter-convert_unicode_sequence_to_string/workflows/(Unnamed%20workflow)/badge.svg)
+
 # Convert Unicode Sequence To String filter plugin for Embulk
 
 Convert unicode sequence to string filter plugin.
