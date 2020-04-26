@@ -3,7 +3,10 @@ plugins {
     id "com.github.jruby-gradle.base" version "1.5.0"
     id "java"
     id "checkstyle"
+    id "com.github.kt3k.coveralls" version "2.8.4"
+    id "jacoco"
 }
+
 import com.github.jrubygradle.JRubyExec
 repositories {
     mavenCentral()
@@ -28,6 +31,13 @@ dependencies {
     // TODO: Remove them.
      testImplementation "org.embulk:embulk-deps-buffer:0.9.23"
      testImplementation "org.embulk:embulk-deps-config:0.9.23"
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
 }
 
 task classpath(type: Copy, dependsOn: ["jar"]) {
